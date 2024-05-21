@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--GameLibrary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="VideoGamesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q1b-lX-y4r">
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -27,17 +28,20 @@
                             <constraint firstItem="q1b-lX-y4r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9pw-XS-hSR"/>
                             <constraint firstItem="q1b-lX-y4r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eJ8-ds-omo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q1b-lX-y4r" secondAttribute="trailing" id="haY-K9-3qf"/>
+                            <constraint firstItem="q1b-lX-y4r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="jb0-Rg-tuO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q1b-lX-y4r" secondAttribute="bottom" id="uFq-p4-Frg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="C85-u9-gep"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="mRO-7u-2ph"/>
+                    <navigationItem key="navigationItem" title="GameLibrary" id="2X2-XV-Czc"/>
                     <connections>
+                        <outlet property="homeView" destination="8bC-Xf-vdC" id="hNy-el-rRK"/>
                         <outlet property="tableView" destination="q1b-lX-y4r" id="ynH-WF-a55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="-560"/>
+            <point key="canvasLocation" x="3664.8854961832058" y="-560.56338028169012"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hi0-le-dcR">
@@ -45,12 +49,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ql0-54-BmT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CPK-ns-PIx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iit-Tf-EIp"/>
                         <segue destination="DVN-3r-iUN" kind="relationship" relationship="viewControllers" id="jMr-h1-gSK"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="s49-Mc-Vm2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVz-kF-drK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,7 +72,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edF-BU-4hv">
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.34901960784313724" green="0.22745098039215686" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e57-be-fGV"/>
@@ -88,7 +93,6 @@
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="homekit" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

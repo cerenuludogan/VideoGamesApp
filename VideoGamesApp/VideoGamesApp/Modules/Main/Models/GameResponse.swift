@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct GameResponse: Decodable {
     let count: Int?
     let next: String?
@@ -21,6 +20,7 @@ struct GamesResultResponse: Decodable {
     let released: String?
     let iconUrl: String?
     let rating: Double?
+    let added: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -28,5 +28,6 @@ struct GamesResultResponse: Decodable {
         case released
         case iconUrl = "background_image"
         case rating
+        case added
     }
 }

@@ -9,8 +9,8 @@ import UIKit
 
 class TripleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     var games: [GamesResultResponse] = []
     
@@ -20,23 +20,15 @@ class TripleTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.register(cellType: TripleCollectionViewCell.self)
         setupPageControl()
+      
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     private func setupPageControl() {
         pageControl.currentPage = 0
         pageControl.numberOfPages = games.count
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
     }
     
-    func setupCell(with games: [GamesResultResponse]) {
-        self.games = games
-        collectionView.reloadData()
-        pageControl.numberOfPages = games.count
-    }
     
     @objc private func pageControlTapped(_ sender: UIPageControl) {
         let page: Int = sender.currentPage
@@ -45,6 +37,13 @@ class TripleTableViewCell: UITableViewCell {
         frame.origin.y = 0
         collectionView.scrollRectToVisible(frame, animated: true)
     }
+    
+    func setupCell(with games: [GamesResultResponse]) {
+        self.games = games
+        collectionView.reloadData()
+        pageControl.numberOfPages = games.count
+    }
+    
 }
 
 extension TripleTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -61,7 +60,7 @@ extension TripleTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        return CGSize(width: width, height: 200)  
+        return CGSize(width: width, height: 150)  
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

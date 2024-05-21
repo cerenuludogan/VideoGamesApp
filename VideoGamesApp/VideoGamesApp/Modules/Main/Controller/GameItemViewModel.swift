@@ -9,6 +9,7 @@ import Foundation
 import Kingfisher
 
 final class GameItemViewModel{
+    
     private let game: GamesResultResponse
     
     init(game: GamesResultResponse) {
@@ -17,9 +18,15 @@ final class GameItemViewModel{
     
     var name: String{
         return game.name ?? ""
+    } 
+    var rating: Double{
+        return game.rating ?? 0.0
     }
     var released: String{
         return game.released ?? ""
+    }
+    var added: Int{
+        return game.added ?? 0
     }
     var gameImage: URL? {
             if let urlString = game.iconUrl {
