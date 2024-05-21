@@ -9,23 +9,58 @@
 /* Begin PBXBuildFile section */
 		542501402BF8D3A300EFAE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425013F2BF8D3A300EFAE03 /* AppDelegate.swift */; };
 		542501422BF8D3A300EFAE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542501412BF8D3A300EFAE03 /* SceneDelegate.swift */; };
-		542501442BF8D3A300EFAE03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542501432BF8D3A300EFAE03 /* ViewController.swift */; };
+		542501442BF8D3A300EFAE03 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542501432BF8D3A300EFAE03 /* GameViewController.swift */; };
 		542501472BF8D3A300EFAE03 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 542501462BF8D3A300EFAE03 /* Base */; };
 		5425014A2BF8D3A300EFAE03 /* VideoGamesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 542501482BF8D3A300EFAE03 /* VideoGamesApp.xcdatamodeld */; };
 		5425014C2BF8D3A500EFAE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5425014B2BF8D3A500EFAE03 /* Assets.xcassets */; };
 		5425014F2BF8D3A500EFAE03 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5425014E2BF8D3A500EFAE03 /* Base */; };
+		542501FC2BFA22F700EFAE03 /* UITableViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542501FB2BFA22F700EFAE03 /* UITableViewCell + Extension.swift */; };
+		542501FE2BFA231500EFAE03 /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542501FD2BFA231500EFAE03 /* UITableView + Extension.swift */; };
+		542502002BFA235000EFAE03 /* UICollectionViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542501FF2BFA235000EFAE03 /* UICollectionViewCell + Extension.swift */; };
+		542502022BFA237100EFAE03 /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542502012BFA237100EFAE03 /* UICollectionView + Extension.swift */; };
+		542502042BFA256900EFAE03 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542502032BFA256900EFAE03 /* ServiceManager.swift */; };
+		542502072BFA265700EFAE03 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 542502062BFA265700EFAE03 /* Alamofire */; };
+		542502092BFA265700EFAE03 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 542502082BFA265700EFAE03 /* AlamofireDynamic */; };
+		5425020B2BFA27D400EFAE03 /* GameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425020A2BFA27D400EFAE03 /* GameResponse.swift */; };
+		5425021C2BFA2FB400EFAE03 /* TripleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425021A2BFA2FB400EFAE03 /* TripleTableViewCell.swift */; };
+		5425021D2BFA2FB400EFAE03 /* TripleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5425021B2BFA2FB400EFAE03 /* TripleTableViewCell.xib */; };
+		542502222BFA33CB00EFAE03 /* TripleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542502202BFA33CB00EFAE03 /* TripleCollectionViewCell.swift */; };
+		542502232BFA33CB00EFAE03 /* TripleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542502212BFA33CB00EFAE03 /* TripleCollectionViewCell.xib */; };
+		542502262BFA3BD700EFAE03 /* AllGamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542502242BFA3BD700EFAE03 /* AllGamesTableViewCell.swift */; };
+		542502272BFA3BD700EFAE03 /* AllGamesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542502252BFA3BD700EFAE03 /* AllGamesTableViewCell.xib */; };
+		54B59C2D2BFBC6B200ED3471 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B59C2C2BFBC6B200ED3471 /* GameViewModel.swift */; };
+		54B59C2F2BFC95F900ED3471 /* GameItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B59C2E2BFC95F900ED3471 /* GameItemViewModel.swift */; };
+		54B59C322BFC965400ED3471 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 54B59C312BFC965400ED3471 /* Kingfisher */; };
+		54B59C342BFC9B9600ED3471 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B59C332BFC9B9600ED3471 /* UIView + Extension.swift */; };
+		54B59C362BFCC55200ED3471 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B59C352BFCC55200ED3471 /* UIColor + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5425013C2BF8D3A300EFAE03 /* VideoGamesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoGamesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5425013F2BF8D3A300EFAE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542501412BF8D3A300EFAE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		542501432BF8D3A300EFAE03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		542501432BF8D3A300EFAE03 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		542501462BF8D3A300EFAE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		542501492BF8D3A300EFAE03 /* VideoGamesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoGamesApp.xcdatamodel; sourceTree = "<group>"; };
 		5425014B2BF8D3A500EFAE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5425014E2BF8D3A500EFAE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		542501502BF8D3A500EFAE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		542501FB2BFA22F700EFAE03 /* UITableViewCell + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Extension.swift"; sourceTree = "<group>"; };
+		542501FD2BFA231500EFAE03 /* UITableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
+		542501FF2BFA235000EFAE03 /* UICollectionViewCell + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Extension.swift"; sourceTree = "<group>"; };
+		542502012BFA237100EFAE03 /* UICollectionView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + Extension.swift"; sourceTree = "<group>"; };
+		542502032BFA256900EFAE03 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		5425020A2BFA27D400EFAE03 /* GameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResponse.swift; sourceTree = "<group>"; };
+		5425021A2BFA2FB400EFAE03 /* TripleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripleTableViewCell.swift; sourceTree = "<group>"; };
+		5425021B2BFA2FB400EFAE03 /* TripleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripleTableViewCell.xib; sourceTree = "<group>"; };
+		542502202BFA33CB00EFAE03 /* TripleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripleCollectionViewCell.swift; sourceTree = "<group>"; };
+		542502212BFA33CB00EFAE03 /* TripleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripleCollectionViewCell.xib; sourceTree = "<group>"; };
+		542502242BFA3BD700EFAE03 /* AllGamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesTableViewCell.swift; sourceTree = "<group>"; };
+		542502252BFA3BD700EFAE03 /* AllGamesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllGamesTableViewCell.xib; sourceTree = "<group>"; };
+		54B59C2C2BFBC6B200ED3471 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		54B59C2E2BFC95F900ED3471 /* GameItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItemViewModel.swift; sourceTree = "<group>"; };
+		54B59C332BFC9B9600ED3471 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		54B59C352BFCC55200ED3471 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B59C322BFC965400ED3471 /* Kingfisher in Frameworks */,
+				542502072BFA265700EFAE03 /* Alamofire in Frameworks */,
+				542502092BFA265700EFAE03 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +96,8 @@
 		5425013E2BF8D3A300EFAE03 /* VideoGamesApp */ = {
 			isa = PBXGroup;
 			children = (
+				542501FA2BF9FF1D00EFAE03 /* Extensions */,
+				542501F92BF9FEFE00EFAE03 /* Managers */,
 				542501F02BF9FA3800EFAE03 /* Delegates */,
 				542501F42BF9FAE800EFAE03 /* Modules */,
 				542501F12BF9FA4E00EFAE03 /* Storyboards */,
@@ -123,7 +163,9 @@
 		542501F62BF9FB0700EFAE03 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				542501432BF8D3A300EFAE03 /* ViewController.swift */,
+				542501432BF8D3A300EFAE03 /* GameViewController.swift */,
+				54B59C2C2BFBC6B200ED3471 /* GameViewModel.swift */,
+				54B59C2E2BFC95F900ED3471 /* GameItemViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +173,12 @@
 		542501F72BF9FB1300EFAE03 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5425021A2BFA2FB400EFAE03 /* TripleTableViewCell.swift */,
+				5425021B2BFA2FB400EFAE03 /* TripleTableViewCell.xib */,
+				542502202BFA33CB00EFAE03 /* TripleCollectionViewCell.swift */,
+				542502212BFA33CB00EFAE03 /* TripleCollectionViewCell.xib */,
+				542502242BFA3BD700EFAE03 /* AllGamesTableViewCell.swift */,
+				542502252BFA3BD700EFAE03 /* AllGamesTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -138,8 +186,30 @@
 		542501F82BF9FB1D00EFAE03 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5425020A2BFA27D400EFAE03 /* GameResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		542501F92BF9FEFE00EFAE03 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				542502032BFA256900EFAE03 /* ServiceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		542501FA2BF9FF1D00EFAE03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				542501FB2BFA22F700EFAE03 /* UITableViewCell + Extension.swift */,
+				542501FD2BFA231500EFAE03 /* UITableView + Extension.swift */,
+				542501FF2BFA235000EFAE03 /* UICollectionViewCell + Extension.swift */,
+				542502012BFA237100EFAE03 /* UICollectionView + Extension.swift */,
+				54B59C332BFC9B9600ED3471 /* UIView + Extension.swift */,
+				54B59C352BFCC55200ED3471 /* UIColor + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +228,11 @@
 			dependencies = (
 			);
 			name = VideoGamesApp;
+			packageProductDependencies = (
+				542502062BFA265700EFAE03 /* Alamofire */,
+				542502082BFA265700EFAE03 /* AlamofireDynamic */,
+				54B59C312BFC965400ED3471 /* Kingfisher */,
+			);
 			productName = VideoGamesApp;
 			productReference = 5425013C2BF8D3A300EFAE03 /* VideoGamesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +261,10 @@
 				Base,
 			);
 			mainGroup = 542501332BF8D3A300EFAE03;
+			packageReferences = (
+				542502052BFA265700EFAE03 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				54B59C302BFC965400ED3471 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 5425013D2BF8D3A300EFAE03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,8 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5425014C2BF8D3A500EFAE03 /* Assets.xcassets in Resources */,
+				542502232BFA33CB00EFAE03 /* TripleCollectionViewCell.xib in Resources */,
 				5425014F2BF8D3A500EFAE03 /* Base in Resources */,
+				542502272BFA3BD700EFAE03 /* AllGamesTableViewCell.xib in Resources */,
 				542501472BF8D3A300EFAE03 /* Base in Resources */,
+				5425021D2BFA2FB400EFAE03 /* TripleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,10 +295,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542501442BF8D3A300EFAE03 /* ViewController.swift in Sources */,
+				542501442BF8D3A300EFAE03 /* GameViewController.swift in Sources */,
+				542502002BFA235000EFAE03 /* UICollectionViewCell + Extension.swift in Sources */,
+				542502222BFA33CB00EFAE03 /* TripleCollectionViewCell.swift in Sources */,
+				542501FC2BFA22F700EFAE03 /* UITableViewCell + Extension.swift in Sources */,
+				54B59C342BFC9B9600ED3471 /* UIView + Extension.swift in Sources */,
+				54B59C2F2BFC95F900ED3471 /* GameItemViewModel.swift in Sources */,
+				542502262BFA3BD700EFAE03 /* AllGamesTableViewCell.swift in Sources */,
 				542501402BF8D3A300EFAE03 /* AppDelegate.swift in Sources */,
+				54B59C2D2BFBC6B200ED3471 /* GameViewModel.swift in Sources */,
 				542501422BF8D3A300EFAE03 /* SceneDelegate.swift in Sources */,
+				542502042BFA256900EFAE03 /* ServiceManager.swift in Sources */,
 				5425014A2BF8D3A300EFAE03 /* VideoGamesApp.xcdatamodeld in Sources */,
+				542502022BFA237100EFAE03 /* UICollectionView + Extension.swift in Sources */,
+				5425021C2BFA2FB400EFAE03 /* TripleTableViewCell.swift in Sources */,
+				5425020B2BFA27D400EFAE03 /* GameResponse.swift in Sources */,
+				54B59C362BFCC55200ED3471 /* UIColor + Extension.swift in Sources */,
+				542501FE2BFA231500EFAE03 /* UITableView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +532,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		542502052BFA265700EFAE03 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		54B59C302BFC965400ED3471 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		542502062BFA265700EFAE03 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 542502052BFA265700EFAE03 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		542502082BFA265700EFAE03 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 542502052BFA265700EFAE03 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		54B59C312BFC965400ED3471 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54B59C302BFC965400ED3471 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		542501482BF8D3A300EFAE03 /* VideoGamesApp.xcdatamodeld */ = {
