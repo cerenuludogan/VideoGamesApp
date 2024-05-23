@@ -24,7 +24,6 @@ final class GameViewModel {
     func fetchGameList() {
         ServiceManager.shared.getAllGames { [weak self] gameResponse in
             guard let self = self else { return }
-            
             if let gameResponse = gameResponse, let games = gameResponse.results {
                 self.gameList = games
                 self.allGames = games

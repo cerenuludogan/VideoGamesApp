@@ -10,12 +10,19 @@ import Kingfisher
 
 class AllGamesTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var addedLabel: UILabel!
-    @IBOutlet private weak var ratingLabel: UILabel!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var gameImageView: UIImageView!
-    @IBOutlet private weak var releasedLabel: UILabel!
- 
+
+
+    @IBOutlet weak var dowloandLabel: UILabel!
+    
+    @IBOutlet weak var addedLabel: UILabel!
+    
+   
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var releasedLabel: UILabel!
+    
+    @IBOutlet weak var gameImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -26,10 +33,21 @@ class AllGamesTableViewCell: UITableViewCell {
     func setupCell(game: GameItemViewModel) {
         nameLabel.text = game.name
         releasedLabel.text = game.released
-        addedLabel.text = String(game.added)
         ratingLabel.attributedText = createRatingText(with: game.rating)
         addedLabel.attributedText = createAddedText(with: game.added)
+        // İndirme butonuna indirme ikonunu ekle
         
+        // İndirme butonuna indirme ikonunu ekleyin
+            let downloadImageAttachment = NSTextAttachment()
+            downloadImageAttachment.image = UIImage(systemName: "icloud.and.arrow.down")?.withTintColor(.white, renderingMode: .alwaysOriginal) // Beyaz renkte indirme ikonu
+            
+            let combinedAttributedString = NSMutableAttributedString()
+            combinedAttributedString.append(NSAttributedString(attachment: downloadImageAttachment))
+            
+            dowloandLabel.attributedText = combinedAttributedString // dowloandLabel'a eklenti metni atadık
+            
+            
+            
         if let gameImageURL = game.gameImage {
             gameImageView.kf.setImage(with: gameImageURL, placeholder: UIImage(named: "defaultCoinImage"))
             } else {
@@ -37,7 +55,7 @@ class AllGamesTableViewCell: UITableViewCell {
             }
     }
           
-          private func createRatingText(with rating: Double) -> NSAttributedString {
+     private func createRatingText(with rating: Double) -> NSAttributedString {
               let starImageAttachment = NSTextAttachment()
               starImageAttachment.image = UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
               let imageOffsetY: CGFloat = -2.0
@@ -51,7 +69,7 @@ class AllGamesTableViewCell: UITableViewCell {
               return combinedAttributedString
           }
     
-    private func createAddedText(with count: Int) -> NSAttributedString {
+  private func createAddedText(with count: Int) -> NSAttributedString {
             let downloadImageAttachment = NSTextAttachment()
             downloadImageAttachment.image = UIImage(systemName: "arrow.down.to.line.alt")?.withTintColor(.white, renderingMode: .alwaysOriginal)
             let imageOffsetY: CGFloat = -2.0
