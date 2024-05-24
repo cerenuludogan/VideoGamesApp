@@ -14,22 +14,26 @@ final class GameViewModel {
         case allGamesCell
     
     }
-    
+    var nextPage: String?
     var celltypeList: [GameTableCellType] = []
-    private var gameList: [GamesResultResponse] = []
+    var gameList: [GamesResultResponse] = []
     var allGames: [GamesResultResponse] = []
     
     var onDataUpdated: (() -> Void)?
-    
+
     func fetchGameList() {
-        ServiceManager.shared.getAllGames { [weak self] gameResponse in
+        ServiceManager.shared.getAllGames(nextPage: nextPage) { [weak self] gameResponse in
             guard let self = self else { return }
-            if let gameResponse = gameResponse, let games = gameResponse.results {
-                self.gameList = games
-                self.allGames = games
-                self.celltypeList.append(.tripleGame)
-                self.celltypeList.append(.allGamesCell)
-                self.onDataUpdated?() 
+            if let gameResponse = gameResponse,
+               let games = gameResponse.results {
+                allGames.append(contentsOf: games)
+                nextPage = gameResponse.next
+                if celltypeList.isEmpty {
+                    gameList = Array(games.prefix(3))
+                    celltypeList.append(.tripleGame)
+                    celltypeList.append(.allGamesCell)
+                }
+                onDataUpdated?()
             } else {
                 print("GameResponse is nil.")
             }

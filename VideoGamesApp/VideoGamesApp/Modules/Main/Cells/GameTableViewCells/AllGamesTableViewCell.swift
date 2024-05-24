@@ -11,18 +11,14 @@ import Kingfisher
 class AllGamesTableViewCell: UITableViewCell {
 
 
-
-    @IBOutlet weak var dowloandLabel: UILabel!
+    @IBOutlet private weak var countLabel: UILabel!
+    @IBOutlet private weak var dowloandLabel: UILabel!
+    @IBOutlet private weak var addedLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var releasedLabel: UILabel!
+    @IBOutlet private weak var gameImageView: UIImageView!
     
-    @IBOutlet weak var addedLabel: UILabel!
-    
-   
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var releasedLabel: UILabel!
-    
-    @IBOutlet weak var gameImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -30,7 +26,8 @@ class AllGamesTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = .clear
                 
     }
-    func setupCell(game: GameItemViewModel) {
+    func setupCell(game: GameItemViewModel, index: Int) {
+        countLabel.text = "\(index + 3)"
         nameLabel.text = game.name
         releasedLabel.text = game.released
         ratingLabel.attributedText = createRatingText(with: game.rating)

@@ -15,7 +15,6 @@ class GameViewController: UIViewController {
     lazy var games = viewModel.allGames
     lazy var filteredGame = [GamesResultResponse]()
     
-    
     let searchController = UISearchController(searchResultsController: nil)
     var isSearchBarEmpty: Bool {
         searchController.searchBar.text?.isEmpty ?? true
@@ -23,6 +22,7 @@ class GameViewController: UIViewController {
     var isFiltering: Bool {
         searchController.isActive && !isSearchBarEmpty
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,12 @@ class GameViewController: UIViewController {
      //   configureTabBar()
         configureSearchController()
         
+    }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("favgame list: \(FavoriteManager.shared.favoriteGameList)")
     }
     
     private func setupBackgroundImage() {
@@ -181,7 +187,8 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
         case .tripleGame:
             return isFiltering ? 0 : 1
         case .allGamesCell:
-            return isFiltering ? filteredGame.count : viewModel.allGames.count//isFiltering ? filteredGame.count :
+            return isFiltering ? filteredGame.count : max(viewModel.allGames.count - 3, 0)
+
         }
     }
     
@@ -189,16 +196,25 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
         switch viewModel.celltypeList[indexPath.section] {
         case .tripleGame:
             let cell = tableView.dequeCell(cellType: TripleTableViewCell.self, indexPath: indexPath)
-            let games = Array(viewModel.allGames.prefix(3))
+            let games = Array(viewModel.gameList)
             cell.setupCell(with: games)
             return cell
         case .allGamesCell:
             let cell = tableView.dequeCell(cellType: AllGamesTableViewCell.self, indexPath: indexPath)
-            let game = viewModel.allGames[indexPath.row]
-            cell.setupCell(game: GameItemViewModel(game: game))
+            let game = viewModel.allGames[indexPath.row + 3] // İlk üç veriyi atla
+            cell.setupCell(game: GameItemViewModel(game: game), index: indexPath.row + 1)
             return cell
         }
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+            
+            if indexPath.section == viewModel.celltypeList.count - 1 && indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+                
+                if viewModel.nextPage != nil {
+                    viewModel.fetchGameList()
+                }
+            }
+        }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch viewModel.celltypeList[indexPath.section] {
         case .tripleGame:
@@ -206,8 +222,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
         case .allGamesCell:
             let selectedGame = viewModel.allGames[indexPath.row]
             performSegue(withIdentifier: "toDetailVC", sender: selectedGame)
-            print("Tüm paralar tıklandı.")
-            // Diğer case'ler
+            print("Game tıklandı.")
             
         }
        
@@ -227,5 +242,6 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
         func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
             return CGFloat.leastNormalMagnitude
         }
+        
     }
 }
