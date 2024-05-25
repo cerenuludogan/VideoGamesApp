@@ -22,6 +22,9 @@ class WatchButtonTableViewCell: UITableViewCell {
     
     // MARK: - Helper Methods
     
+    @IBAction func watchCliked(_ sender: UIButton) {
+        showAlert()
+    }
     private func configureShareButton() {
         var configuration = UIButton.Configuration.plain()
         configuration.title = "Watch"
@@ -35,4 +38,10 @@ class WatchButtonTableViewCell: UITableViewCell {
         watchButton.configuration = configuration
         watchButton.configuration = configuration
     }
+    private func showAlert() {
+            let alert = UIAlertController(title: "Sorry", message: "Currently, it cannot be watched.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+        }
 }

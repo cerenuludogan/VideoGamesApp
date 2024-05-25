@@ -95,10 +95,16 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
             cell.likeButtonAction = { [weak self] in
                 guard let self = self else { return }
                 if let selectedGame = self.viewModel.detailResponse {
+                    // Favori oyunları listesine ekleyin
+                    FavoriteManager.shared.addFavoriteGame(selectedGame)
+                    self.tableView.reloadData()
+                    // Favori ekranına geçiş yapın
                     self.performSegue(withIdentifier: "toFavoriteVC", sender: selectedGame)
                 }
             }
             return cell
+
+
         case .description:
             let cell = tableView.dequeCell(cellType: TextTableViewCell.self, indexPath: indexPath)
             cell.setupCell(detailViewModel: viewModel)
@@ -126,5 +132,11 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
         case .watch:
             return UITableView.automaticDimension
         }
+    }
+}
+extension NewDetailController {
+    func addFavoriteGame(_ game: DetailResponse) {
+        FavoriteManager.shared.addFavoriteGame(game)
+        // Favori eklendiğinde kullanıcıya bildirim gösterebilir veya başka bir işlem yapabilirsiniz.
     }
 }

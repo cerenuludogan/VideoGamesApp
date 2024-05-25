@@ -57,14 +57,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="gYa-IU-fRx" kind="relationship" relationship="viewControllers" id="uUi-J0-ZHn"/>
-                        <segue destination="CBd-1U-BsN" kind="relationship" relationship="viewControllers" id="LaD-K2-QBK"/>
+                        <segue destination="KYJ-i0-xsw" kind="relationship" relationship="viewControllers" id="JUB-lX-3eW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVz-kF-drK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1038.9312977099237" y="-2.1126760563380285"/>
         </scene>
-        <!--Favorites-->
+        <!--Favorite Library-->
         <scene sceneID="Jya-Aa-0zx">
             <objects>
                 <viewController id="CBd-1U-BsN" customClass="FavoriteViewController" customModule="VideoGamesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,11 +74,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CEN-fV-Htr">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.44308035709999999" green="0.3411764706" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.46666666670000001" green="0.32549019610000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yny-Ti-owV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.18039215689999999" green="0.14297125099999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Yny-Ti-owV" firstAttribute="bottom" secondItem="CEN-fV-Htr" secondAttribute="bottom" id="8yK-yq-LTm"/>
                             <constraint firstItem="CEN-fV-Htr" firstAttribute="top" secondItem="Yny-Ti-owV" secondAttribute="top" id="KwH-mB-PGz"/>
@@ -86,17 +87,15 @@
                             <constraint firstItem="CEN-fV-Htr" firstAttribute="leading" secondItem="Yny-Ti-owV" secondAttribute="leading" id="jeJ-Jp-aKM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="24c-iy-Y2N">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="cqv-hU-y2s"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="4ae-Ab-uW6"/>
+                    <navigationItem key="navigationItem" title="Favorite Library" id="cqv-hU-y2s"/>
                     <connections>
                         <outlet property="tableView" destination="CEN-fV-Htr" id="Qei-KJ-SQt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VwE-BV-NqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="548"/>
+            <point key="canvasLocation" x="2795" y="546"/>
         </scene>
         <!--detail-->
         <scene sceneID="d0u-jG-MqW">
@@ -127,7 +126,7 @@
                                                     <visualEffectView opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNu-Ow-ACk">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="66.666666666666671"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="edz-bd-unU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="66.666666666666671"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuL-YE-lNi">
@@ -138,7 +137,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <visualEffectView hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-tr-5Ae">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="66.666666666666671"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
                                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fJi-wX-11F">
                                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,16 +383,42 @@
                     <navigationItem key="navigationItem" id="qd1-WE-dJr"/>
                     <connections>
                         <outlet property="tableView" destination="JPi-r5-bCG" id="cQP-ak-ooW"/>
-                        <segue destination="CBd-1U-BsN" kind="show" identifier="toFavoriteVC" id="sDb-v7-1Te"/>
+                        <segue destination="CBd-1U-BsN" kind="show" identifier="toFavoriteVC" id="CKb-VB-vdg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OD-Qq-aNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3589" y="-418"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="ScM-xQ-mTJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KYJ-i0-xsw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="24c-iy-Y2N">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="x8F-6j-rOw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q6z-ep-OkX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CBd-1U-BsN" kind="relationship" relationship="rootViewController" id="Ess-BS-QX2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5H6-oi-NuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="547"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sDb-v7-1Te"/>
+        <segue reference="CKb-VB-vdg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>

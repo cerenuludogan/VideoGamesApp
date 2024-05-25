@@ -24,7 +24,22 @@ class AllGamesTableViewCell: UITableViewCell {
         
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dowloandLabelTapped))
+        dowloandLabel.isUserInteractionEnabled = true
+        dowloandLabel.addGestureRecognizer(tapGestureRecognizer)
                 
+    }
+    
+    @objc private func dowloandLabelTapped() {
+            showAlert()
+        }
+
+    private func showAlert() {
+            let alert = UIAlertController(title: "Sorry", message: "Download is not allowed.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     func setupCell(game: GameItemViewModel, index: Int) {
         countLabel.text = "\(index)"
@@ -32,52 +47,18 @@ class AllGamesTableViewCell: UITableViewCell {
         releasedLabel.text = game.released
         ratingLabel.attributedText = createRatingText(with: game.rating)
         addedLabel.attributedText = createAddedText(with: game.added)
-        // İndirme butonuna indirme ikonunu ekle
-        
-        // İndirme butonuna indirme ikonunu ekleyin
-            let downloadImageAttachment = NSTextAttachment()
-            downloadImageAttachment.image = UIImage(systemName: "icloud.and.arrow.down")?.withTintColor(.white, renderingMode: .alwaysOriginal) // Beyaz renkte indirme ikonu
-            
+        let downloadImageAttachment = NSTextAttachment()
+        downloadImageAttachment.image = UIImage(systemName: "icloud.and.arrow.down")?.withTintColor(.white, renderingMode: .alwaysOriginal)
             let combinedAttributedString = NSMutableAttributedString()
             combinedAttributedString.append(NSAttributedString(attachment: downloadImageAttachment))
-            
-            dowloandLabel.attributedText = combinedAttributedString // dowloandLabel'a eklenti metni atadık
-            
-            
-            
+            dowloandLabel.attributedText = combinedAttributedString
         if let gameImageURL = game.gameImage {
             gameImageView.kf.setImage(with: gameImageURL, placeholder: UIImage(named: "defaultCoinImage"))
             } else {
                 gameImageView.image = UIImage(named: "defaultCoinImage")
             }
     }
-    
-//    func setupCell(detail: DetailResponse) {
-//        nameLabel.text = detail.name
-//        releasedLabel.text = detail.released
-//        ratingLabel.attributedText = createRatingText(with: detail.rating!)
-//       // addedLabel.attributedText = createAddedText(with: detail.)
-//        // İndirme butonuna indirme ikonunu ekle
-//        
-//        // İndirme butonuna indirme ikonunu ekleyin
-//            let downloadImageAttachment = NSTextAttachment()
-//            downloadImageAttachment.image = UIImage(systemName: "icloud.and.arrow.down")?.withTintColor(.white, renderingMode: .alwaysOriginal) // Beyaz renkte indirme ikonu
-//            
-//            let combinedAttributedString = NSMutableAttributedString()
-//            combinedAttributedString.append(NSAttributedString(attachment: downloadImageAttachment))
-//            
-//            dowloandLabel.attributedText = combinedAttributedString // dowloandLabel'a eklenti metni atadık
-//            
-//            
-//            
-//        if let backgroundImageURLString = detail.backgroundImage,
-//           let backgroundImageURL = URL(string: backgroundImageURLString) {
-//            gameImageView.kf.setImage(with: backgroundImageURL, placeholder: UIImage(named: "placeholder_image"))
-//        } else {
-//            gameImageView.image = UIImage(named: "placeholder_image")
-//        }
-//    }
-          
+
      private func createRatingText(with rating: Double) -> NSAttributedString {
               let starImageAttachment = NSTextAttachment()
               starImageAttachment.image = UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
@@ -104,7 +85,6 @@ class AllGamesTableViewCell: UITableViewCell {
             combinedAttributedString.append(downloadAttributedString)
             combinedAttributedString.append(NSAttributedString(string: " "))
             combinedAttributedString.append(countAttributedString)
-            
             return combinedAttributedString
         }
 }

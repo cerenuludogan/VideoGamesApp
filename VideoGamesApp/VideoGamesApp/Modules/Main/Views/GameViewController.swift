@@ -62,10 +62,6 @@ class GameViewController: UIViewController {
             }
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        print("favgame list: \(FavoriteManager.shared.favoriteGameList)")
-//    }
     
     // MARK: - UI Setup
     

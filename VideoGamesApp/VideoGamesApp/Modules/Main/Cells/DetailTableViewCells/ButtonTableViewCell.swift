@@ -13,14 +13,20 @@ class ButtonTableViewCell: UITableViewCell {
     @IBOutlet private weak var sharedButton: UIButton!
     @IBOutlet private weak var likeButton: UIButton!
     var likeButtonAction: (() -> Void)?
-    
+    var detail: DetailResponse?
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLikeButton()
         configureShareButton()
     }
-    
+    func addToFavoritesButtonTapped() {
+        // Favori olarak işaretlenen oyunun detaylarına erişim sağlayın
+        if let selectedGameDetail = self.detail {
+            // Favori oyunları listesine ekleyin
+            FavoriteManager.shared.addFavoriteGame(selectedGameDetail)
+        }
+    }
     // MARK: - Private Methods
     private func configureShareButton() {
         var configuration = UIButton.Configuration.plain()
@@ -49,12 +55,23 @@ class ButtonTableViewCell: UITableViewCell {
         likeButton.backgroundColor = customColor
         likeButton.configuration = configuration
     }
-    
+    private func showShareNotAllowedAlert() {
+        let alert = UIAlertController(title: "Sorry", message: "Sharing is not allowed at the moment.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
     
     @IBAction func LikeButtonClicked(_ sender: UIButton) {
         likeButtonAction?()
+        if let selectedGameDetail = self.detail {
+                FavoriteManager.shared.addFavoriteGame(selectedGameDetail)
+            }
                
     }
   
+    @IBAction func shareButtonClicked(_ sender: UIButton) {
+        showShareNotAllowedAlert()
+    }
 }
 
