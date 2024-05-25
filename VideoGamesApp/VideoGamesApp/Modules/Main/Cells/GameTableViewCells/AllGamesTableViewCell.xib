@@ -106,6 +106,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="3Sd-17-g0m" secondAttribute="bottom" constant="8" id="Bzt-mc-ZdC"/>
                     <constraint firstItem="3Sd-17-g0m" firstAttribute="leading" secondItem="B92-QV-Sbv" secondAttribute="leading" constant="8" id="RgO-Bh-aE2"/>
+                    <constraint firstItem="3Sd-17-g0m" firstAttribute="top" secondItem="B92-QV-Sbv" secondAttribute="top" constant="16" id="ZaR-GR-cna"/>
                     <constraint firstAttribute="bottom" secondItem="3Sd-17-g0m" secondAttribute="bottom" constant="8" id="ana-bo-2k5"/>
                     <constraint firstAttribute="trailing" secondItem="3Sd-17-g0m" secondAttribute="trailing" constant="8" id="ije-fi-Au8"/>
                     <constraint firstItem="3Sd-17-g0m" firstAttribute="top" secondItem="B92-QV-Sbv" secondAttribute="top" constant="8" id="x2a-Au-dS5"/>

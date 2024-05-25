@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="124" id="vAi-iJ-bb7" customClass="FavoriteTableViewCell" customModule="VideoGamesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vAi-iJ-bb7" id="r0L-c4-zc4">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-XL-Yej">
+                        <rect key="frame" x="8" y="8" width="423" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-w7-6b7">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="OjH-ex-gOh"/>
+                                    <constraint firstAttribute="width" constant="100" id="Y7y-V0-6MJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DhP-mO-63I">
+                                <rect key="frame" x="110" y="0.0" width="313" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX6-IZ-i1F">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P7q-qn-jeD">
+                                        <rect key="frame" x="0.0" y="50" width="313" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3O-Mo-dFx">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izu-5V-85p">
+                                                <rect key="frame" x="159" y="0.0" width="154" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DhP-mO-63I" secondAttribute="bottom" id="XfZ-LH-ev7"/>
+                            <constraint firstAttribute="height" constant="100" id="kSU-Yw-yTp"/>
+                            <constraint firstItem="DhP-mO-63I" firstAttribute="top" secondItem="K9B-XL-Yej" secondAttribute="top" id="plr-pJ-IQ7"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="K9B-XL-Yej" firstAttribute="leading" secondItem="r0L-c4-zc4" secondAttribute="leading" constant="8" id="1Aw-8c-elm"/>
+                    <constraint firstAttribute="trailing" secondItem="K9B-XL-Yej" secondAttribute="trailing" constant="8" id="67R-rn-N97"/>
+                    <constraint firstAttribute="bottom" secondItem="K9B-XL-Yej" secondAttribute="bottom" constant="8" id="Njb-7c-8Oa"/>
+                    <constraint firstItem="K9B-XL-Yej" firstAttribute="top" secondItem="r0L-c4-zc4" secondAttribute="top" constant="8" id="WvI-IP-XLH"/>
+                    <constraint firstAttribute="bottom" secondItem="K9B-XL-Yej" secondAttribute="bottom" constant="8" id="zrD-37-GSG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="dS0-7F-qZg"/>
+            <connections>
+                <outlet property="gameImageView" destination="4A9-w7-6b7" id="pdl-Lt-vlX"/>
+                <outlet property="nameLabel" destination="xX6-IZ-i1F" id="VjY-Uj-RPf"/>
+                <outlet property="ratingLabel" destination="h3O-Mo-dFx" id="lz1-wl-V8Y"/>
+                <outlet property="releasedLabel" destination="izu-5V-85p" id="Js9-kt-iSW"/>
+            </connections>
+            <point key="canvasLocation" x="191.6030534351145" y="59.154929577464792"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -60,7 +60,7 @@ extension TripleTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        return CGSize(width: width, height: 150)  
+        return CGSize(width: width, height: 200)  
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

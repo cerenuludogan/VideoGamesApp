@@ -9,8 +9,13 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet private var homeView: UIView!
     @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
     var viewModel = GameViewModel()
     lazy var games = viewModel.allGames
     lazy var filteredGame = [GamesResultResponse]()
@@ -23,6 +28,7 @@ class GameViewController: UIViewController {
         searchController.isActive && !isSearchBarEmpty
     }
 
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +48,26 @@ class GameViewController: UIViewController {
     
         setupBackgroundImage()
         configureNavigationBar()
-     //   configureTabBar()
         configureSearchController()
         
     }
-    
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("favgame list: \(FavoriteManager.shared.favoriteGameList)")
+    // MARK: - Helper Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toDetailVC" {
+                if let destinationVC = segue.destination as? NewDetailController {
+                    if let selectedGame = sender as? GamesResultResponse {
+                        destinationVC.game = selectedGame
+                    }
+                }
+            }
     }
+
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        print("favgame list: \(FavoriteManager.shared.favoriteGameList)")
+//    }
+    
+    // MARK: - UI Setup
     
     private func setupBackgroundImage() {
         let backgroundImage = UIImage(named: "8")
@@ -84,31 +100,7 @@ class GameViewController: UIViewController {
     
         
     }
- /*   private func configureTabBar() {
-        guard let tabBar = tabBarController?.tabBar else { return }
-    
-        tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
-        tabBar.isTranslucent = true
-        tabBar.backgroundColor = .clear
-        
 
-        let blurEffect = UIBlurEffect(style: .regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = tabBar.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.3
-        tabBar.insertSubview(blurEffectView, at: 0)
-        
-        if let items = tabBar.items {
-            for item in items {
-                item.image = item.image?.withRenderingMode(.alwaysTemplate)
-                item.selectedImage = item.selectedImage?.withRenderingMode(.alwaysTemplate)
-                item.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
-                item.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-            }
-        }
-    }*/
     private func configureSearchController() {
         searchController.searchBar.placeholder = "Search Games"
         searchController.searchBar.tintColor = .white
@@ -143,6 +135,7 @@ class GameViewController: UIViewController {
      }
 }
      
+// MARK: - UISearchBarDelegate
 
     extension GameViewController:UISearchBarDelegate {
 
@@ -164,19 +157,11 @@ class GameViewController: UIViewController {
                 filteredGame.removeAll()
                 tableView.reloadData()
             }
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "toDetailVC" {
-                    if let destinationVC = segue.destination as? DetailViewController {
-                        if let selectedGame = sender as? GamesResultResponse {
-                            destinationVC.game = selectedGame
-                        }
-                    }
-                }
-            }
         
 }
     
-    
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
 extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.celltypeList.count
@@ -201,7 +186,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case .allGamesCell:
             let cell = tableView.dequeCell(cellType: AllGamesTableViewCell.self, indexPath: indexPath)
-            let game = viewModel.allGames[indexPath.row + 3] // İlk üç veriyi atla
+            let game = viewModel.allGames[indexPath.row ] // İlk üç veriyi atla
             cell.setupCell(game: GameItemViewModel(game: game), index: indexPath.row + 1)
             return cell
         }

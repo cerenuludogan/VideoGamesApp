@@ -6,17 +6,29 @@
 //
 
 import UIKit
-
+import Kingfisher
 class ImageTableViewCell: UITableViewCell {
+    
+    @IBOutlet private weak var nameLabel: UILabel!
+    // MARK: - Outlets
+    @IBOutlet private weak var gameImageView: UIImageView!
 
-    @IBOutlet weak var gameImageView: UIImageView!
+    @IBOutlet private weak var nameView: UIView!
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
+    }
+    
+    // MARK: - Public Methods
+    func setupCell(detail: DetailResponse) {
+        nameLabel.text = detail.name
+           if let backgroundImageURLString = detail.backgroundImage,
+              let backgroundImageURL = URL(string: backgroundImageURLString) {
+               gameImageView.kf.setImage(with: backgroundImageURL, placeholder: UIImage(named: "placeholder_image"))
+           } else {
+               gameImageView.image = UIImage(named: "placeholder_image")
+           }
     }
 
-   /* func setupCell(game: DetailViewModel){
-        gameImageView.image = game.detailResponse?.backgroundImage
-    }*/
-    
 }

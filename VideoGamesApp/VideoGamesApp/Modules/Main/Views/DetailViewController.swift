@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
             }
         }
         
-        viewModel.onDetailFetched = { [weak self] in
+         viewModel.onDetailFetched = { [weak self] in
             guard let self = self else { return }
             self.updateUI()
         }
@@ -64,8 +64,8 @@ class DetailViewController: UIViewController {
 
     @IBAction func likeClickedButton(_ sender: UIButton) {
         print("butona tıklandı.")
-        guard let game else { return }
-        FavoriteManager.shared.favoriteGameList.append(game)
+      //  guard let game else { return }
+       // FavoriteManager.shared.favoriteGameList.append(game)
     }
 
     private func configureView() {

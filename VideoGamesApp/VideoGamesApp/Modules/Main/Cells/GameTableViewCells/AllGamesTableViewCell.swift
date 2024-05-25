@@ -27,7 +27,7 @@ class AllGamesTableViewCell: UITableViewCell {
                 
     }
     func setupCell(game: GameItemViewModel, index: Int) {
-        countLabel.text = "\(index + 3)"
+        countLabel.text = "\(index)"
         nameLabel.text = game.name
         releasedLabel.text = game.released
         ratingLabel.attributedText = createRatingText(with: game.rating)
@@ -51,6 +51,32 @@ class AllGamesTableViewCell: UITableViewCell {
                 gameImageView.image = UIImage(named: "defaultCoinImage")
             }
     }
+    
+//    func setupCell(detail: DetailResponse) {
+//        nameLabel.text = detail.name
+//        releasedLabel.text = detail.released
+//        ratingLabel.attributedText = createRatingText(with: detail.rating!)
+//       // addedLabel.attributedText = createAddedText(with: detail.)
+//        // İndirme butonuna indirme ikonunu ekle
+//        
+//        // İndirme butonuna indirme ikonunu ekleyin
+//            let downloadImageAttachment = NSTextAttachment()
+//            downloadImageAttachment.image = UIImage(systemName: "icloud.and.arrow.down")?.withTintColor(.white, renderingMode: .alwaysOriginal) // Beyaz renkte indirme ikonu
+//            
+//            let combinedAttributedString = NSMutableAttributedString()
+//            combinedAttributedString.append(NSAttributedString(attachment: downloadImageAttachment))
+//            
+//            dowloandLabel.attributedText = combinedAttributedString // dowloandLabel'a eklenti metni atadık
+//            
+//            
+//            
+//        if let backgroundImageURLString = detail.backgroundImage,
+//           let backgroundImageURL = URL(string: backgroundImageURLString) {
+//            gameImageView.kf.setImage(with: backgroundImageURL, placeholder: UIImage(named: "placeholder_image"))
+//        } else {
+//            gameImageView.image = UIImage(named: "placeholder_image")
+//        }
+//    }
           
      private func createRatingText(with rating: Double) -> NSAttributedString {
               let starImageAttachment = NSTextAttachment()

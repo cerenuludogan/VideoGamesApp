@@ -52,10 +52,10 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="AU2-bX-0qe" secondAttribute="trailing" id="BxN-pR-TYZ"/>
-                    <constraint firstItem="AU2-bX-0qe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HkD-IE-Imd"/>
+                    <constraint firstItem="AU2-bX-0qe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ERP-E3-g9x"/>
                     <constraint firstItem="AU2-bX-0qe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IBX-OB-MSO"/>
                     <constraint firstAttribute="bottom" secondItem="AU2-bX-0qe" secondAttribute="bottom" id="bdS-DN-U9a"/>
-                    <constraint firstItem="AU2-bX-0qe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cPe-E7-7TN"/>
+                    <constraint firstAttribute="bottom" secondItem="AU2-bX-0qe" secondAttribute="bottom" id="xec-L5-pow"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

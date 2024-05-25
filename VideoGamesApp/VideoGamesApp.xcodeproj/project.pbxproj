@@ -46,6 +46,13 @@
 		54CA0AEE2C00D1E000790921 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0AEC2C00D1E000790921 /* TextTableViewCell.swift */; };
 		54CA0AEF2C00D1E000790921 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CA0AED2C00D1E000790921 /* TextTableViewCell.xib */; };
 		54CA0AF32C00D27400790921 /* NewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0AF22C00D27400790921 /* NewDetailController.swift */; };
+		54CA0AF62C01CFAD00790921 /* WatchButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0AF42C01CFAD00790921 /* WatchButtonTableViewCell.swift */; };
+		54CA0AF72C01CFAD00790921 /* WatchButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CA0AF52C01CFAD00790921 /* WatchButtonTableViewCell.xib */; };
+		54CA0AF92C01D12000790921 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0AF82C01D12000790921 /* FavoriteViewController.swift */; };
+		54CA0AFE2C026AB500790921 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0AFC2C026AB500790921 /* FavoriteTableViewCell.swift */; };
+		54CA0AFF2C026AB500790921 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CA0AFD2C026AB500790921 /* FavoriteTableViewCell.xib */; };
+		54CA0B062C027CA100790921 /* UIView + Extension2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0B052C027CA100790921 /* UIView + Extension2.swift */; };
+		54CA0B082C02837C00790921 /* Tabbar + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CA0B072C02837C00790921 /* Tabbar + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +94,13 @@
 		54CA0AEC2C00D1E000790921 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		54CA0AED2C00D1E000790921 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		54CA0AF22C00D27400790921 /* NewDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailController.swift; sourceTree = "<group>"; };
+		54CA0AF42C01CFAD00790921 /* WatchButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchButtonTableViewCell.swift; sourceTree = "<group>"; };
+		54CA0AF52C01CFAD00790921 /* WatchButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchButtonTableViewCell.xib; sourceTree = "<group>"; };
+		54CA0AF82C01D12000790921 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		54CA0AFC2C026AB500790921 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		54CA0AFD2C026AB500790921 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		54CA0B052C027CA100790921 /* UIView + Extension2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension2.swift"; sourceTree = "<group>"; };
+		54CA0B072C02837C00790921 /* Tabbar + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tabbar + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +212,9 @@
 		542501F72BF9FB1300EFAE03 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				54CA0ADB2C00CCAA00790921 /* DetailTableViewCells */,
 				54CA0ADA2C00CC9400790921 /* GameTableViewCells */,
+				54CA0ADB2C00CCAA00790921 /* DetailTableViewCells */,
+				54CA0B002C026F7600790921 /* FavoriteTableViewCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -231,6 +246,8 @@
 				542502012BFA237100EFAE03 /* UICollectionView + Extension.swift */,
 				54B59C332BFC9B9600ED3471 /* UIView + Extension.swift */,
 				54B59C352BFCC55200ED3471 /* UIColor + Extension.swift */,
+				54CA0B052C027CA100790921 /* UIView + Extension2.swift */,
+				54CA0B072C02837C00790921 /* Tabbar + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +258,7 @@
 				542501432BF8D3A300EFAE03 /* GameViewController.swift */,
 				54B59C3B2BFD41B800ED3471 /* DetailViewController.swift */,
 				54CA0AF22C00D27400790921 /* NewDetailController.swift */,
+				54CA0AF82C01D12000790921 /* FavoriteViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,8 +297,19 @@
 				54CA0AE92C00D13E00790921 /* ButtonTableViewCell.xib */,
 				54CA0AEC2C00D1E000790921 /* TextTableViewCell.swift */,
 				54CA0AED2C00D1E000790921 /* TextTableViewCell.xib */,
+				54CA0AF42C01CFAD00790921 /* WatchButtonTableViewCell.swift */,
+				54CA0AF52C01CFAD00790921 /* WatchButtonTableViewCell.xib */,
 			);
 			path = DetailTableViewCells;
+			sourceTree = "<group>";
+		};
+		54CA0B002C026F7600790921 /* FavoriteTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				54CA0AFC2C026AB500790921 /* FavoriteTableViewCell.swift */,
+				54CA0AFD2C026AB500790921 /* FavoriteTableViewCell.xib */,
+			);
+			path = FavoriteTableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +383,8 @@
 				5425014C2BF8D3A500EFAE03 /* Assets.xcassets in Resources */,
 				54CA0AE72C00D0B100790921 /* SymbolTableViewCell.xib in Resources */,
 				54CA0AEF2C00D1E000790921 /* TextTableViewCell.xib in Resources */,
+				54CA0AF72C01CFAD00790921 /* WatchButtonTableViewCell.xib in Resources */,
+				54CA0AFF2C026AB500790921 /* FavoriteTableViewCell.xib in Resources */,
 				542502232BFA33CB00EFAE03 /* TripleCollectionViewCell.xib in Resources */,
 				5425014F2BF8D3A500EFAE03 /* Base in Resources */,
 				542502272BFA3BD700EFAE03 /* AllGamesTableViewCell.xib in Resources */,
@@ -377,8 +408,12 @@
 				54CA0ADE2C00CCCC00790921 /* ImageTableViewCell.swift in Sources */,
 				54CA0AD52BFFED1F00790921 /* DetailViewModel.swift in Sources */,
 				542501FC2BFA22F700EFAE03 /* UITableViewCell + Extension.swift in Sources */,
+				54CA0B082C02837C00790921 /* Tabbar + Extension.swift in Sources */,
 				54B59C342BFC9B9600ED3471 /* UIView + Extension.swift in Sources */,
 				54B59C2F2BFC95F900ED3471 /* GameItemViewModel.swift in Sources */,
+				54CA0AF62C01CFAD00790921 /* WatchButtonTableViewCell.swift in Sources */,
+				54CA0B062C027CA100790921 /* UIView + Extension2.swift in Sources */,
+				54CA0AF92C01D12000790921 /* FavoriteViewController.swift in Sources */,
 				542502262BFA3BD700EFAE03 /* AllGamesTableViewCell.swift in Sources */,
 				54CA0AEE2C00D1E000790921 /* TextTableViewCell.swift in Sources */,
 				542501402BF8D3A300EFAE03 /* AppDelegate.swift in Sources */,
@@ -386,6 +421,7 @@
 				54B59C3C2BFD41B800ED3471 /* DetailViewController.swift in Sources */,
 				542501422BF8D3A300EFAE03 /* SceneDelegate.swift in Sources */,
 				542502042BFA256900EFAE03 /* ServiceManager.swift in Sources */,
+				54CA0AFE2C026AB500790921 /* FavoriteTableViewCell.swift in Sources */,
 				5425014A2BF8D3A300EFAE03 /* VideoGamesApp.xcdatamodeld in Sources */,
 				542502022BFA237100EFAE03 /* UICollectionView + Extension.swift in Sources */,
 				54CA0AD92C00C11C00790921 /* FavoriteManager.swift in Sources */,

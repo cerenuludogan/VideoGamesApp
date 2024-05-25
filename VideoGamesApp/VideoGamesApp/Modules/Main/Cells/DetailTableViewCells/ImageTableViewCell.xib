@@ -16,25 +16,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="G20-K5-4v0">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G20-K5-4v0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                     </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMC-YW-xKZ">
+                        <rect key="frame" x="0.0" y="39" width="320" height="50"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="isY-JY-rAo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Oqg-gZ-JNO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Je-jU-Gpt">
+                                            <rect key="frame" x="139.33333333333334" y="14.999999999999998" width="41.333333333333343" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2Je-jU-Gpt" firstAttribute="centerX" secondItem="Oqg-gZ-JNO" secondAttribute="centerX" id="TZq-YK-0ma"/>
+                                        <constraint firstItem="2Je-jU-Gpt" firstAttribute="centerY" secondItem="Oqg-gZ-JNO" secondAttribute="centerY" id="zjr-kf-aAo"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="OLL-QI-04H"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="G20-K5-4v0" secondAttribute="bottom" id="H2c-Fw-qia"/>
                     <constraint firstAttribute="trailing" secondItem="G20-K5-4v0" secondAttribute="trailing" id="OhM-4W-7IW"/>
                     <constraint firstItem="G20-K5-4v0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TH3-Vg-jmL"/>
+                    <constraint firstItem="JMC-YW-xKZ" firstAttribute="leading" secondItem="G20-K5-4v0" secondAttribute="leading" id="Tx4-LY-Atw"/>
+                    <constraint firstItem="JMC-YW-xKZ" firstAttribute="bottom" secondItem="G20-K5-4v0" secondAttribute="bottom" id="XYe-Ia-Il8"/>
                     <constraint firstItem="G20-K5-4v0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="etI-5c-FGf"/>
+                    <constraint firstItem="JMC-YW-xKZ" firstAttribute="trailing" secondItem="G20-K5-4v0" secondAttribute="trailing" id="xAo-MC-MQa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="gameImageView" destination="G20-K5-4v0" id="mj0-Gg-jWy"/>
+                <outlet property="nameLabel" destination="2Je-jU-Gpt" id="Uds-UO-jdP"/>
+                <outlet property="nameView" destination="Oqg-gZ-JNO" id="9EB-LK-Yu4"/>
             </connections>
             <point key="canvasLocation" x="-143.5114503816794" y="35.563380281690144"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="10" width="300" height="168"/>
-    </resources>
 </document>

@@ -14,13 +14,12 @@ final class DetailViewModel {
         case info
         case action
         case description
+        case watch
     }
     
-    
-    var detailResponse: DetailResponse?
     var celltypeList: [DetailTableViewCell] = []
+    var detailResponse: DetailResponse?
     var gameDetailList: [DetailResponse] = []
-    
     var onDetailFetched: (() -> Void)?
 
     func fetchGameDetails(id: Int) {
@@ -31,8 +30,19 @@ final class DetailViewModel {
                 self.celltypeList.append(.info)
                 self.celltypeList.append(.action)
                 self.celltypeList.append(.description)
+                self.celltypeList.append(.watch)
                 self.onDetailFetched?()
             }
         }
     
+    var cleanDescription: String {
+        return (detailResponse?.description.removingHTMLTags())! 
+        }
+    
+}
+
+extension String {
+    func removingHTMLTags() -> String {
+        return self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+    }
 }
