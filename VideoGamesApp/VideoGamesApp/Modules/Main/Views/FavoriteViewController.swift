@@ -13,7 +13,9 @@ class FavoriteViewController: UIViewController {
     
     var detail: DetailResponse?
     var favoriteGames: [DetailResponse] = []
-
+    private let backgroundImageView = UIImageView()
+    
+    
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,10 +27,12 @@ class FavoriteViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         registerCell()
+        configureBackground()
        
         if let detail = detail {
             favoriteGames.append(detail)
         }
+       
     }
     
     // MARK: - Helper Methods
@@ -42,6 +46,26 @@ class FavoriteViewController: UIViewController {
         favoriteGames = FavoriteManager.shared.favoriteGames
         tableView.reloadData()
     }
+    private func configureBackground(){
+        let backgroundImageView = UIImageView(image: UIImage(named: "8"))
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.clipsToBounds = true
+        tableView.backgroundView = backgroundImageView
+               
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.addSubview(blurEffectView)
+               
+        NSLayoutConstraint.activate([
+        blurEffectView.leadingAnchor.constraint(equalTo:backgroundImageView.leadingAnchor),
+        blurEffectView.trailingAnchor.constraint(equalTo:backgroundImageView.trailingAnchor),
+        blurEffectView.topAnchor.constraint(equalTo:backgroundImageView.topAnchor),
+        blurEffectView.bottomAnchor.constraint(equalTo:backgroundImageView.bottomAnchor)
+               ])
+        blurEffectView.alpha = 0.5
+    }
+
   
 }
 
@@ -67,13 +91,10 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
                 guard let self = self else { return }
-                // Favori yöneticisinden favori oyunu kaldır
                 FavoriteManager.shared.removeFavoriteGame(deletedGame)
-                // Tabloyu güncelle
                 self.favoriteGames.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
-            
             alertController.addAction(cancelAction)
             alertController.addAction(deleteAction)
             

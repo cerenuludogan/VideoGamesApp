@@ -36,7 +36,6 @@ final class ServiceManager {
             AF.request(url).responseDecodable(of: DetailResponse.self) { response in
                 switch response.result {
                 case .success(let gameDetail):
-                    print("Detail Yanıt: \(gameDetail)")
                     completion(gameDetail)
                 case .failure(let error):
                     if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {

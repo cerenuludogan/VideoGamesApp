@@ -23,8 +23,7 @@ class NewDetailController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         registerCells()
-        
-        self.tabBarController?.tabBar.setBackgroundColor(hexColor: "#2E244D")
+        configureTabbar()
         
         if let game = game {
             viewModel.fetchGameDetails(id: game.id!)
@@ -37,6 +36,10 @@ class NewDetailController: UIViewController {
     }
     
     // MARK: Helper -  Private Methods
+    private func configureTabbar(){
+        self.tabBarController?.tabBar.setBackgroundColor(hexColor: "#2E244D")
+
+    }
     
     private func registerCells() {
         tableView.register(cellType: ImageTableViewCell.self)

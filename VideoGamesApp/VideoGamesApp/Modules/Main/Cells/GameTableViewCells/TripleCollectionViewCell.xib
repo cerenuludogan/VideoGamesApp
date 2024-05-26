@@ -33,7 +33,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="pzZ-Bo-oEt" secondAttribute="trailing" id="BSo-Il-TZl"/>
-                            <constraint firstAttribute="height" constant="150" id="M1m-FW-oRv"/>
                             <constraint firstItem="pzZ-Bo-oEt" firstAttribute="leading" secondItem="zwj-dq-Hik" secondAttribute="leading" id="Oir-8w-AhT"/>
                             <constraint firstAttribute="bottom" secondItem="pzZ-Bo-oEt" secondAttribute="bottom" id="kAz-nO-WrL"/>
                             <constraint firstItem="pzZ-Bo-oEt" firstAttribute="top" secondItem="zwj-dq-Hik" secondAttribute="top" id="sU8-Pe-Y9K"/>

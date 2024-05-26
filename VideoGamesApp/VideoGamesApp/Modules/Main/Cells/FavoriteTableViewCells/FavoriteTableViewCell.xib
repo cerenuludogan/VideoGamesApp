@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -43,17 +44,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P7q-qn-jeD">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P7q-qn-jeD">
                                                 <rect key="frame" x="0.0" y="50" width="317" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3O-Mo-dFx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="154.66666666666666" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izu-5V-85p">
-                                                        <rect key="frame" x="161" y="0.0" width="156" height="50"/>
+                                                        <rect key="frame" x="162.66666666666669" y="0.0" width="154.33333333333331" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -63,7 +64,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.38961522110000002" green="0.3411764706" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="DhP-mO-63I" secondAttribute="bottom" id="XfZ-LH-ev7"/>
                                     <constraint firstAttribute="height" constant="100" id="kSU-Yw-yTp"/>
@@ -72,7 +73,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.38961522110000002" green="0.3411764706" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K9B-XL-Yej" firstAttribute="top" secondItem="zSV-QV-JFh" secondAttribute="top" constant="4" id="2LR-iq-fWM"/>
                             <constraint firstAttribute="bottom" secondItem="K9B-XL-Yej" secondAttribute="bottom" id="TgK-z7-Bpq"/>
@@ -82,7 +83,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.38961522110000002" green="0.3411764706" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="zSV-QV-JFh" secondAttribute="trailing" id="2Zb-wY-3K4"/>
                     <constraint firstItem="zSV-QV-JFh" firstAttribute="top" secondItem="r0L-c4-zc4" secondAttribute="top" id="Czy-35-zNg"/>
@@ -93,7 +94,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="dS0-7F-qZg"/>
-            <color key="backgroundColor" red="0.38961522110000002" green="0.3411764706" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="gameImageView" destination="4A9-w7-6b7" id="pdl-Lt-vlX"/>
                 <outlet property="nameLabel" destination="xX6-IZ-i1F" id="VjY-Uj-RPf"/>

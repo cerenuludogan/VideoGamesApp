@@ -24,6 +24,11 @@ class FavoriteTableViewCell: UITableViewCell {
         
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
+        self.backgroundColor = .clear
+                self.contentView.backgroundColor = .clear
+                
+            
+
     }
     
     // MARK: - Public Methods
@@ -39,6 +44,8 @@ class FavoriteTableViewCell: UITableViewCell {
         } else {
             gameImageView.image = UIImage(named: "placeholder_image")
         }
+        
+        
     }
     
     // MARK: - Private Methods
