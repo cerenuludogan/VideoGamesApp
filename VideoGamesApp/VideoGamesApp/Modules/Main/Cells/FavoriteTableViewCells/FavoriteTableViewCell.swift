@@ -25,10 +25,8 @@ class FavoriteTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
         self.backgroundColor = .clear
-                self.contentView.backgroundColor = .clear
-                
-            
-
+        self.contentView.backgroundColor = .clear
+       
     }
     
     // MARK: - Public Methods

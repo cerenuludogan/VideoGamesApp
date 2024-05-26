@@ -8,11 +8,9 @@
 import UIKit
 import Kingfisher
 class ImageTableViewCell: UITableViewCell {
-    
-    @IBOutlet private weak var nameLabel: UILabel!
     // MARK: - Outlets
+    @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var gameImageView: UIImageView!
-
     @IBOutlet private weak var nameView: UIView!
     // MARK: - Lifecycle
     override func awakeFromNib() {

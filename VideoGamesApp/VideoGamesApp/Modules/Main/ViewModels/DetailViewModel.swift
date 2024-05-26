@@ -25,7 +25,7 @@ final class DetailViewModel {
 
     func fetchGameDetails(id: Int) {
             ServiceManager.shared.fetchGameDetails(id: id) { [weak self] detailResponse in
-                guard let self = self else { return }
+                guard let self, let detailResponse else { return }
                 self.detailResponse = detailResponse
                 self.celltypeList.append(.headerImage)
                 self.celltypeList.append(.info)
@@ -33,16 +33,12 @@ final class DetailViewModel {
                 self.celltypeList.append(.description)
                 self.celltypeList.append(.watch)
                 self.onDetailFetched?()
-                
-                
             }
         }
    
-    
     var cleanDescription: String {
         return (detailResponse?.description.removingHTMLTags())! 
-        }
-    
+    }
 }
 
 extension String {

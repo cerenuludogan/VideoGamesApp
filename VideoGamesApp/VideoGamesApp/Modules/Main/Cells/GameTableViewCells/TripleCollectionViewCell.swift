@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 class TripleCollectionViewCell: UICollectionViewCell {
-
+    // MARK: - Outlets
     @IBOutlet private weak var gameImageView: UIImageView!
  
     override func awakeFromNib() {

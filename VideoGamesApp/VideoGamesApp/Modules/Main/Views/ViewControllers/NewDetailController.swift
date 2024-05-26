@@ -88,7 +88,8 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
         switch viewModel.celltypeList[indexPath.section] {
         case .headerImage:
             let cell = tableView.dequeCell(cellType: ImageTableViewCell.self, indexPath: indexPath)
-            cell.setupCell(detail: viewModel.detailResponse!)
+            guard let detailResponse = viewModel.detailResponse else { return cell }
+            cell.setupCell(detail: detailResponse)
             return cell
         case .info:
             let cell = tableView.dequeCell(cellType: SymbolTableViewCell.self, indexPath: indexPath)
@@ -114,35 +115,7 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch viewModel.celltypeList[indexPath.section] {
-        case .headerImage:
-            return 200.0
-        case .info:
-            return 70
-        case .action:
-            return 70
-        case .description:
-        if let descriptionText = viewModel.detailResponse?.description {
-            return heightForText(descriptionText, width: tableView.bounds.width - 16, font: UIFont.systemFont(ofSize: 14)) + 16
-            } else {
-            return UITableView.automaticDimension
-        }
-        case .watch:
-            return UITableView.automaticDimension
-        }
-    }
-        func heightForLabel(text: String, font: UIFont, width: CGFloat) -> CGFloat {
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: .greatestFiniteMagnitude))
-            label.numberOfLines = 0
-            label.font = font
-            label.text = text
-            label.sizeToFit()
-            
-            return label.frame.height
-        }
-    }
+}
 
     extension NewDetailController {
         func addFavoriteGame(_ game: DetailResponse) {
