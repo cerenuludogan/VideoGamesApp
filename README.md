@@ -23,3 +23,19 @@ The application has an interface that allows users to view game details. Detaile
 
 
 ### Screenshot
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="https://github.com/cerenuludogan/VideoGamesApp/assets/62713981/845cc8f3-d08e-44dd-bf7d-af985336e0dd" alt="Home" style="width: 30%;">
+    <img src="https://github.com/cerenuludogan/VideoGamesApp/assets/62713981/c5d18d15-ecf7-4437-bd5d-03b569f357c5" alt="Favorite" style="width: 30%;">
+    <img src="https://github.com/cerenuludogan/VideoGamesApp/assets/62713981/ca4f4eb7-6305-4fb4-881f-5275a0f5c36b" alt="Detail" style="width: 30%;">
+</div>
+
+### Screen Recording
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="https://github.com/cerenuludogan/VideoGamesApp/assets/62713981/94c9d136-7be8-4bed-b0b5-bbd65ee64816" alt="Search Record" style="width: 50%;">
+    <img src="https://github.com/cerenuludogan/VideoGamesApp/assets/62713981/3ffda195-eec8-4ea5-86e4-31f9901135d5" alt="Simulator Screen Recording" style="width: 50%;">
+</div>
+
+
+
+
