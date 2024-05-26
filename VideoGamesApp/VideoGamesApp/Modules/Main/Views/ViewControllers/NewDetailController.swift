@@ -14,6 +14,7 @@ class NewDetailController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     var game: GamesResultResponse?
     var viewModel = DetailViewModel()
+    
    
     // MARK: - Lifecycle Methods
     
@@ -58,7 +59,7 @@ class NewDetailController: UIViewController {
             }
         }
     }
-    // MARK:
+  
     
     private func heightForText(_ text: String, width: CGFloat, font: UIFont) -> CGFloat {
         let size = CGSize(width: width, height: .greatestFiniteMagnitude)
@@ -78,7 +79,7 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let celltypeList = viewModel.celltypeList
         switch celltypeList[section] {
-        case .headerImage, .info, .action, .description, .watch:
+        case .headerImage, .info, .action,.description, .watch:
             return 1
         }
     }
@@ -98,16 +99,12 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
             cell.likeButtonAction = { [weak self] in
                 guard let self = self else { return }
                 if let selectedGame = self.viewModel.detailResponse {
-                    // Favori oyunları listesine ekleyin
                     FavoriteManager.shared.addFavoriteGame(selectedGame)
                     self.tableView.reloadData()
-                    // Favori ekranına geçiş yapın
                     self.performSegue(withIdentifier: "toFavoriteVC", sender: selectedGame)
                 }
             }
             return cell
-
-
         case .description:
             let cell = tableView.dequeCell(cellType: TextTableViewCell.self, indexPath: indexPath)
             cell.setupCell(detailViewModel: viewModel)
@@ -127,19 +124,29 @@ extension NewDetailController: UITableViewDelegate, UITableViewDataSource {
         case .action:
             return 70
         case .description:
-            if let descriptionText = viewModel.detailResponse?.description {
-                return heightForText(descriptionText, width: tableView.bounds.width - 16, font: UIFont.systemFont(ofSize: 14)) + 16
+        if let descriptionText = viewModel.detailResponse?.description {
+            return heightForText(descriptionText, width: tableView.bounds.width - 16, font: UIFont.systemFont(ofSize: 14)) + 16
             } else {
-                return UITableView.automaticDimension
-            }
+            return UITableView.automaticDimension
+        }
         case .watch:
             return UITableView.automaticDimension
         }
     }
-}
-extension NewDetailController {
-    func addFavoriteGame(_ game: DetailResponse) {
-        FavoriteManager.shared.addFavoriteGame(game)
-        // Favori eklendiğinde kullanıcıya bildirim gösterebilir veya başka bir işlem yapabilirsiniz.
+        func heightForLabel(text: String, font: UIFont, width: CGFloat) -> CGFloat {
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: .greatestFiniteMagnitude))
+            label.numberOfLines = 0
+            label.font = font
+            label.text = text
+            label.sizeToFit()
+            
+            return label.frame.height
+        }
     }
-}
+
+    extension NewDetailController {
+        func addFavoriteGame(_ game: DetailResponse) {
+            FavoriteManager.shared.addFavoriteGame(game)
+        }
+    }
+

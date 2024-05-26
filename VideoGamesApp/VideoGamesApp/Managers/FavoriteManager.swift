@@ -15,8 +15,6 @@ final class FavoriteManager {
     func addFavoriteGame(_ game: DetailResponse) {
         if !favoriteGames.contains(where: { $0.id == game.id }) {
             favoriteGames.append(game)
-            print("eklendi")
-            print(favoriteGames.count)
         }
     }
     
@@ -25,6 +23,5 @@ final class FavoriteManager {
         if let index = favoriteGames.firstIndex(where: { $0.id == game.id }) {
             favoriteGames.remove(at: index)
         }
-        print("silindi")
     }
 }

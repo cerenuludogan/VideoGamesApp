@@ -28,6 +28,7 @@ class FavoriteViewController: UIViewController {
         tableView.dataSource = self
         registerCell()
         configureBackground()
+        configureNavigationBar()
        
         if let detail = detail {
             favoriteGames.append(detail)
@@ -65,7 +66,18 @@ class FavoriteViewController: UIViewController {
                ])
         blurEffectView.alpha = 0.5
     }
+    private func configureNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = .clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white] // Başlık metni beyaz olsun
 
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
   
 }
 

@@ -138,7 +138,6 @@
 				542501F92BF9FEFE00EFAE03 /* Managers */,
 				542501F02BF9FA3800EFAE03 /* Delegates */,
 				542501F42BF9FAE800EFAE03 /* Modules */,
-				542501F62BF9FB0700EFAE03 /* Controller */,
 				542501F12BF9FA4E00EFAE03 /* Storyboards */,
 				542501F22BF9FA6800EFAE03 /* Resources */,
 				542501F32BF9FA8E00EFAE03 /* Supports */,
@@ -200,11 +199,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		542501F62BF9FB0700EFAE03 /* Controller */ = {
+		542501F62BF9FB0700EFAE03 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				542501432BF8D3A300EFAE03 /* GameViewController.swift */,
+				54CA0AF22C00D27400790921 /* NewDetailController.swift */,
+				54CA0AF82C01D12000790921 /* FavoriteViewController.swift */,
 			);
-			path = Controller;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		542501F72BF9FB1300EFAE03 /* Cells */ = {
@@ -253,9 +255,7 @@
 		54CA0AD22BFFEC1E00790921 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				542501432BF8D3A300EFAE03 /* GameViewController.swift */,
-				54CA0AF22C00D27400790921 /* NewDetailController.swift */,
-				54CA0AF82C01D12000790921 /* FavoriteViewController.swift */,
+				542501F62BF9FB0700EFAE03 /* ViewControllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";

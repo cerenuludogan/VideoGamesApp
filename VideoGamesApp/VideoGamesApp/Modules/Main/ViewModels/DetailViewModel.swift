@@ -15,8 +15,9 @@ final class DetailViewModel {
         case action
         case description
         case watch
+        
     }
-    
+
     var celltypeList: [DetailTableViewCell] = []
     var detailResponse: DetailResponse?
     var gameDetailList: [DetailResponse] = []
@@ -32,8 +33,11 @@ final class DetailViewModel {
                 self.celltypeList.append(.description)
                 self.celltypeList.append(.watch)
                 self.onDetailFetched?()
+                
+                
             }
         }
+   
     
     var cleanDescription: String {
         return (detailResponse?.description.removingHTMLTags())! 

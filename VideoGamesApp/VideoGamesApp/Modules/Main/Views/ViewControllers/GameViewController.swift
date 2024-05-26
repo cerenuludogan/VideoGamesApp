@@ -89,6 +89,8 @@ class GameViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
         appearance.backgroundColor = .clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white] // Başlık metni beyaz olsun
+
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.isTranslucent = true
@@ -142,7 +144,6 @@ class GameViewController: UIViewController {
         }
     }
 
-        
         private func updateTableViewVisibility() {
             tableView.isHidden = isFiltering && filteredGame.isEmpty
             tableView.reloadData()
@@ -223,7 +224,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch viewModel.celltypeList[indexPath.section] {
         case .tripleGame:
-            return 150.0
+            return 200
         case .allGamesCell:
             return UITableView.automaticDimension
         }

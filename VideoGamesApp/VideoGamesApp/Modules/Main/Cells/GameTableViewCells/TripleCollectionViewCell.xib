@@ -11,17 +11,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TripleCollectionViewCell" customModule="VideoGamesApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="149" height="116"/>
+            <rect key="frame" x="0.0" y="0.0" width="198" height="116"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="149" height="116"/>
+                <rect key="frame" x="0.0" y="0.0" width="198" height="116"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwj-dq-Hik">
-                        <rect key="frame" x="0.0" y="0.0" width="149" height="116"/>
+                        <rect key="frame" x="0.0" y="0.0" width="198" height="116"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pzZ-Bo-oEt">
-                                <rect key="frame" x="0.0" y="0.0" width="149" height="116"/>
+                                <rect key="frame" x="0.0" y="0.0" width="198" height="116"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -39,7 +39,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
+                                <real key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -53,16 +53,16 @@
                 <constraint firstAttribute="bottom" secondItem="zwj-dq-Hik" secondAttribute="bottom" id="iRo-5x-7IY"/>
                 <constraint firstAttribute="trailing" secondItem="zwj-dq-Hik" secondAttribute="trailing" id="wis-IS-ydR"/>
             </constraints>
-            <size key="customSize" width="149" height="116"/>
+            <size key="customSize" width="198" height="116"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="10"/>
+                    <real key="value" value="30"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="gameImageView" destination="pzZ-Bo-oEt" id="zgQ-JZ-kTy"/>
             </connections>
-            <point key="canvasLocation" x="202.29007633587784" y="42.95774647887324"/>
+            <point key="canvasLocation" x="239.69465648854961" y="42.95774647887324"/>
         </collectionViewCell>
     </objects>
     <resources>
