@@ -224,7 +224,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch viewModel.celltypeList[indexPath.section] {
         case .tripleGame:
-            return 200
+            return 250
         case .allGamesCell:
             return UITableView.automaticDimension
         }

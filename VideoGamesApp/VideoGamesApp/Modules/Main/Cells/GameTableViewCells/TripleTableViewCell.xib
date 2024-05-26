@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-bX-0qe">
-                        <rect key="frame" x="0.0" y="4" width="323" height="165.66666666666666"/>
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="165.66666666666666"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-kR-y2W">
                                 <rect key="frame" x="0.0" y="0.0" width="323" height="132"/>
@@ -53,8 +53,10 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="AU2-bX-0qe" secondAttribute="trailing" id="BxN-pR-TYZ"/>
                     <constraint firstItem="AU2-bX-0qe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IBX-OB-MSO"/>
-                    <constraint firstItem="AU2-bX-0qe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="NLu-yQ-YBl"/>
+                    <constraint firstAttribute="bottom" secondItem="AU2-bX-0qe" secondAttribute="bottom" id="Yb3-Wd-5Fe"/>
                     <constraint firstAttribute="bottom" secondItem="AU2-bX-0qe" secondAttribute="bottom" id="bdS-DN-U9a"/>
+                    <constraint firstItem="AU2-bX-0qe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dco-HP-vaN"/>
+                    <constraint firstAttribute="bottom" secondItem="AU2-bX-0qe" secondAttribute="bottom" id="vyE-OF-B76"/>
                     <constraint firstAttribute="bottom" secondItem="AU2-bX-0qe" secondAttribute="bottom" id="xec-L5-pow"/>
                 </constraints>
             </tableViewCellContentView>

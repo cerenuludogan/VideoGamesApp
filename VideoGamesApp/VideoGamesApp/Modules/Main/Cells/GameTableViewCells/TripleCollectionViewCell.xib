@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="198" height="116"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pzZ-Bo-oEt">
-                                <rect key="frame" x="0.0" y="0.0" width="198" height="116"/>
+                                <rect key="frame" x="4" y="0.0" width="190" height="116"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -30,11 +29,11 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="pzZ-Bo-oEt" secondAttribute="trailing" id="BSo-Il-TZl"/>
-                            <constraint firstItem="pzZ-Bo-oEt" firstAttribute="leading" secondItem="zwj-dq-Hik" secondAttribute="leading" id="Oir-8w-AhT"/>
+                            <constraint firstItem="pzZ-Bo-oEt" firstAttribute="leading" secondItem="zwj-dq-Hik" secondAttribute="leading" constant="4" id="NtC-nU-aL4"/>
                             <constraint firstAttribute="bottom" secondItem="pzZ-Bo-oEt" secondAttribute="bottom" id="kAz-nO-WrL"/>
+                            <constraint firstAttribute="trailing" secondItem="pzZ-Bo-oEt" secondAttribute="trailing" constant="4" id="pBx-30-FOv"/>
                             <constraint firstItem="pzZ-Bo-oEt" firstAttribute="top" secondItem="zwj-dq-Hik" secondAttribute="top" id="sU8-Pe-Y9K"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -65,9 +64,4 @@
             <point key="canvasLocation" x="239.69465648854961" y="42.95774647887324"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
